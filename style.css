@@ -106,12 +106,11 @@ body {
 	border: 1px solid black;
 	top: 95px;
 	width: 700px;
-	background-color: white;
+	background-color: rgb(255, 255, 255);
 	font-size: 20px;
 	padding: 20px;
 	transition: .5s;
-	background-color: white;
-	z-index: 20;
+	z-index: 1;
 }
 .add-new-task h2 {
 	margin-bottom: 20px;
@@ -126,6 +125,7 @@ body {
 .error {
 	margin: 5px;
 	color: white;
+	z-index: -10;
 }
 .btn {
 	background-color: white;
@@ -147,9 +147,10 @@ body {
 	top: 0;
 	left: 50%;
 	transform: translateX(-50%);
-	width: 700px;
+	width: 800px;
 	background-color: white;
 	height: 30px;
+	z-index: 4;
 }
 .deleted {
 	text-decoration: line-through
