@@ -111,6 +111,7 @@ body {
 	padding: 20px;
 	transition: .5s;
 	background-color: white;
+	z-index: 20;
 }
 .add-new-task h2 {
 	margin-bottom: 20px;
