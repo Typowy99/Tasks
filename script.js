@@ -6,6 +6,7 @@ const save = document.querySelector('.save')
 const textarea = document.querySelector('#text')
 const error = document.querySelector('.error')
 const tasks = document.querySelector('.tasks')
+const noneTasks = document.querySelector('.none-task-title')
 
 let taskID = 0
 const checkNewTask = () => {
@@ -43,11 +44,20 @@ const addNewTask = () => {
         addTask.classList.remove('translate')
         title.innerHTML = `<p>dodaj zadanie</p>`
         plus.innerHTML = `<i class="fa-solid fa-plus"></i>`
+        checkNoneTask()
     }
 }
 const deleteTask = id => {
     const taskDelete = document.getElementById(id)
     tasks.removeChild(taskDelete)
+    checkNoneTask()
+}
+const checkNoneTask = () => {
+    if (tasks.textContent == '') {
+        noneTasks.style.display = 'block'
+    } else {
+        noneTasks.style.display = 'none'
+    }
 }
 const doneTask = id => {
     const taskDone = document.getElementById(id)
